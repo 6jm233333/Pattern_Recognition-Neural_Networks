@@ -1,0 +1,1 @@
+{'feature_selection__k': 20, 'svm__C': 10.0, 'svm__degree': 2, 'svm__gamma': 0.01, 'svm__kernel': 'rbf'}

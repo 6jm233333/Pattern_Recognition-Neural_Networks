@@ -1,0 +1,19 @@
+模型最佳参数: {'feature_selection__k': 20, 'svm__C': 10.0, 'svm__degree': 2, 'svm__gamma': 0.01, 'svm__kernel': 'rbf'}
+
+交叉验证准确率: 0.9824 ± 0.0136
+
+测试集准确率: 0.9591
+
+混淆矩阵:
+[[ 60   4]
+ [  3 104]]
+
+分类报告:
+              precision    recall  f1-score   support
+
+          恶性       0.95      0.94      0.94        64
+          良性       0.96      0.97      0.97       107
+
+    accuracy                           0.96       171
+   macro avg       0.96      0.95      0.96       171
+weighted avg       0.96      0.96      0.96       171
