@@ -1,0 +1,34 @@
+执行选用cnn那个
+
+
+然后到相应路径之后，运行如下类似代码：
+(训练)
+python main.py train \
+    --lr=0.001 \               # 学习率
+    --batch_size=16 \         # 批次大小
+    --max_epoch=20 \         # 训练轮次
+    --use_gpu=True \         # 使用GPU
+    --train_data_root="/data1/JiamingLiu/模式识别/Code/Exe_3/dogsVScats/data/catvsdog/train"  # 覆盖默认路径
+
+python main.py train \
+    --batch_size=16 \
+    --max_epoch=2 \
+    --use_gpu=True
+
+
+(继续训练)
+python main.py train --load_model_path=/data1/JiamingLiu/模式识别/Code/Exe_3/dogsVScats/train_pic/model0519_12:57:20/model0519_12:57:20.pth --max_epoch=300 --lr=0.0005
+
+
+
+(验证)
+python main.py validate --batch_size=16 --use_gpu=True --load_model_path=./checkpoints/model0519_02:36:31.pth
+
+
+
+(测试)
+python main.py test \
+    --batch_size=16 \
+    --use_gpu=True \
+    --test_data_root=/data1/JiamingLiu/模式识别/Code/Exe_3/dogsVScats/data/catvsdog/test \
+    --load_model_path=./checkpoints/model0519_02:36:31.pth
