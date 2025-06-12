@@ -1,0 +1,71 @@
+
+(训练部分)
+
+python train.py \
+  --data-path /data1/JiamingLiu/模式识别/Flower/flower_photos \
+  --weights /data1/JiamingLiu/模式识别/Code/Exe_4/weights/vit_large_patch16_224.pth \
+  --model-name vit_large_patch16_224
+
+
+  python train.py \
+  --data-path /data1/JiamingLiu/模式识别/Flower/flower_photos \
+  --weights /data1/JiamingLiu/模式识别/Code/Exe_4/weights/vit_large_patch16_224.pth \
+  --model-name vit_large_patch16_224 \
+  --epochs 200 \
+  --batch-size 16 \
+  --lr 0.001
+
+
+
+
+python train.py \
+  --data-path /data1/JiamingLiu/模式识别/Flower/flower_photos \
+  --weights /data1/JiamingLiu/模式识别/Code/Exe_4/weights/model-19.pth \
+  --model-name vit_base_patch16_224 \
+  --epochs 50 \
+  --batch-size 32 \
+  --lr 0.0001 \
+  --freeze-layers False
+
+python predict.py \
+  --model-name vit_large_patch16_224 \
+  --weights /data1/JiamingLiu/模式识别/Code/Exe_4/weights/model-49.pth  \
+  --img-dir /data1/JiamingLiu/模式识别/Flower/flower_photos/daisy \
+  --device cuda:0
+
+
+python predict.py \
+  --model-name vit_base_patch16_224_in21k \
+  --weights /data1/JiamingLiu/模式识别/Code/Exe_4/weights/model-19.pth \
+  --img-dir /data1/JiamingLiu/模式识别/Flower/flower_photos/tulips \
+  --save-dir /data1/JiamingLiu/模式识别/Code/Exe_4/pic
+
+
+
+采用爬虫、官网数据集和自己拍照的照片获取5类，新建个文件夹data，里面包含5个文件夹，文件夹名字取种类英文：
+daisy共有633张
+dandelion共有989张
+roses共有641张
+sunflowers共有699张
+tulips共有799张
+总共有3761张花卉图片
+
+
+
+
+
+
+
+
+
+
+https://blog.csdn.net/qq_51957239/article/details/132912677?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-132912677-blog-118704747.235^v43^pc_blog_bottom_relevance_base2&spm=1001.2101.3001.4242.1&utm_relevant_index=2
+写报告时参考的链接
+
+
+(数据挖掘：考察，面向自身的课程汇报；分组汇报，评定标准：考勤、课堂讨论、课程汇报、大作业（课程设计，开放几个部分，选择完成）)
+
+（企业家讲座：实践性课程，签到，可能有老师测试）
+
+（云计算：八次企业课程，八位不同的专家进行分享，后面也有不同领域的，考察课：最后提交报告，八次课程有八次不同的主题
+大家自行选择其中的一个，或者写一些自己关于这个topic的见解，写一个报告、自己关于这个topic的见解）
